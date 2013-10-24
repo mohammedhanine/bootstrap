@@ -1,0 +1,40 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  padding-right: 0;
+  > li {
+    > a,
+    > span {
+      float: right; // Collapse white-space
+      margin-left: 0;
+      margin-right: -1px;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-right: 0;
+        .border-right-radius(@border-radius-base);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        .border-left-radius(@border-radius-base);
+      }
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @border-radius-large);
+}
+
+// Small
+.pagination-sm {
+  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @border-radius-small);
+}

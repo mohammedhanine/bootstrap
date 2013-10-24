@@ -19,20 +19,20 @@
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
-  .border-right-radius(0);
+  .border-left-radius(0);
 }
 .input-group-addon:first-child {
-  border-right: 0;
+  border-left: 0;
 }
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child) {
-  .border-left-radius(0);
+  .border-right-radius(0);
 }
 .input-group-addon:last-child {
-  border-left: 0;
+  border-right: 0;
 }
 
 // Button input groups
@@ -40,17 +40,20 @@
 .input-group-btn {
   // Negative margin to only have a 1px border between the two
   &:first-child > .btn {
-    margin-right: -1px;
+    margin-right: 0px;
+    margin-left: -1px;
   }
   &:last-child > .btn {
-    margin-left: -1px;
+    margin-left: 0px;
+    margin-right: -1px;
   }
 }
 .input-group-btn > .btn {
   position: relative;
   // Jankily prevent input button groups from wrapping
   + .btn {
-    margin-left: -4px;
+    margin-left: 0;
+    margin-right: -4px;
   }
 
 }

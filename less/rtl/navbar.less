@@ -9,7 +9,7 @@
 
 .navbar-header {
   @media (min-width: @grid-float-breakpoint) {
-    float: left;
+    float: right;
   }
 }
 
@@ -28,10 +28,12 @@
   @media (min-width: @grid-float-breakpoint) {
     // Account for first and last children spacing
     .navbar-nav.navbar-left:first-child {
-      margin-left: -@navbar-padding-horizontal;
+      margin-left: 0;
+      margin-right: -@navbar-padding-horizontal;
     }
     .navbar-nav.navbar-right:last-child {
-      margin-right: -@navbar-padding-horizontal;
+      margin-left: -@navbar-padding-horizontal;
+      margin-right:0;
     }
     .navbar-text:last-child {
       margin-right: 0;
@@ -50,10 +52,11 @@
 // Brand/project name
 
 .navbar-brand {
-  float: left;
+  float: right;
   @media (min-width: @grid-float-breakpoint) {
     .navbar > .container & {
-      margin-left: -@navbar-padding-horizontal;
+      margin-left: 0;
+      margin-right: -@navbar-padding-horizontal;
     }
   }
 }
@@ -65,8 +68,9 @@
 // JavaScript plugin.
 
 .navbar-toggle {
-  float: right;
-  margin-right: @navbar-padding-horizontal;
+  float: left;
+  margin-right: 0;
+  margin-left: @navbar-padding-horizontal;
 }
 
 
@@ -78,10 +82,10 @@
 .navbar-nav {
   // Uncollapse the nav
   @media (min-width: @grid-float-breakpoint) {
-    float: left;
+    float: right;
 
     > li {
-      float: left;
+      float: right;
     }
   }
 
@@ -95,8 +99,8 @@
 // though so that navbar contents properly stack and align in mobile.
 
 @media (min-width: @grid-float-breakpoint) {
-  .navbar-left  { .pull-left(); }
-  .navbar-right { .pull-right(); }
+  .navbar-left  { .pull-right(); }
+  .navbar-right { .pull-left(); }
 }
 
 
@@ -116,8 +120,8 @@
 // Right aligned menus need alt position
 .navbar-nav.pull-right > li > .dropdown-menu,
 .navbar-nav > li > .dropdown-menu.pull-right {
-  left: auto;
-  right: 0;
+  right: auto;
+  left: 0;
 }
 
 
@@ -128,5 +132,5 @@
 // Add a class to make any element properly align itself vertically within the navbars.
 
 .navbar-text {
-  float: left;
+  float: right;
 }

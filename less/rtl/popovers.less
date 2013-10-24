@@ -1,0 +1,56 @@
+//
+// Popovers
+// --------------------------------------------------
+
+
+.popover {
+  left: 0;
+  text-align: left; // Reset given new insertion method
+  // Offset the popover to account for the popover arrow
+  &.right   { margin-left: 10px; }
+  &.left    { margin-left: -10px; }
+}
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+
+.popover {
+  &.top .arrow {
+    left: 50%;
+    margin-left: -@popover-arrow-outer-width;
+    &:after {
+      margin-left: -@popover-arrow-width;
+    }
+  }
+  &.right .arrow {
+    left: -@popover-arrow-outer-width;
+    border-left-width: 0;
+    border-right-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-right-color: @popover-arrow-outer-color;
+    &:after {
+      left: 1px;
+      border-left-width: 0;
+      border-right-color: @popover-arrow-color;
+    }
+  }
+  &.bottom .arrow {
+    left: 50%;
+    margin-left: -@popover-arrow-outer-width;
+    &:after {
+      margin-left: -@popover-arrow-width;
+    }
+  }
+
+  &.left .arrow {
+    right: -@popover-arrow-outer-width;
+    border-right-width: 0;
+    border-left-color: @popover-arrow-outer-fallback-color; // IE8 fallback
+    border-left-color: @popover-arrow-outer-color;
+    &:after {
+      right: 1px;
+      border-right-width: 0;
+      border-left-color: @popover-arrow-color;
+    }
+  }
+
+}

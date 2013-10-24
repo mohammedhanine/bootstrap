@@ -8,24 +8,28 @@
 
 .radio,
 .checkbox {
-  padding-left: 20px;
+  padding-left: 0;
+  padding-right: 20px;
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  float: left;
-  margin-left: -20px;
+  float: right;
+  margin-left: 0;
+  margin-right: -20px;
 }
 
 // Radios and checkboxes on same line
 .radio-inline,
 .checkbox-inline {
-  padding-left: 20px;
+  padding-left: 0;
+  padding-right: 20px;
 }
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
-  margin-left: 10px; // space out consecutive inline controls
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 // Inline forms
@@ -49,10 +53,12 @@
     .radio,
     .checkbox {
       padding-left: 0;
+      padding-right: 0;
     }
     .radio input[type="radio"],
     .checkbox input[type="checkbox"] {
       margin-left: 0;
+      margin-right: 0;
     }
   }
 }
@@ -65,7 +71,8 @@
   // Only right align form labels here when the columns stop stacking
   @media (min-width: @screen-sm-min) {
     .control-label {
-      text-align: right;
+      text-align: left;
     }
   }
 }
+

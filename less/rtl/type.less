@@ -1,0 +1,60 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+
+// Lists
+// --------------------------------------------------
+
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-right: 0;
+}
+
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+@media (min-width: @grid-float-breakpoint) {
+  .dl-horizontal {
+    dt {
+      float: right;
+      clear: right;
+      text-align: left;
+    }
+    dd {
+      margin-right: @component-offset-horizontal;
+    }
+  }
+}
+
+// MISC
+// ----
+
+
+
+// Blockquotes
+blockquote {
+  border-right: 5px solid @blockquote-border-color;
+  border-left:0;
+  // Float right with text-align: right
+  &.pull-right {
+    padding-left: 15px;
+    padding-right: 0;
+    border-left: 5px solid @blockquote-border-color;
+    border-right: 0;
+    p,
+    small,
+    .small {
+      text-align: left;
+    }
+  }
+}
