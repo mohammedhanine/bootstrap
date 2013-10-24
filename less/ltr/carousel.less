@@ -1,0 +1,107 @@
+//
+// Carousel
+// --------------------------------------------------
+.carousel-inner {
+  > .active {
+    left: 0;
+  }
+  
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  left: 0;
+  // Set gradients for backgrounds
+  &.left {
+    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+  }
+  
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 50%;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 50%;
+  }
+  .icon-prev,
+  .icon-next {
+    margin-left: -10px;
+  }
+
+  .icon-prev {
+    &:before {
+      content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+    }
+  }
+  .icon-next {
+    &:before {
+      content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+    }
+  }
+}
+
+// Optional indicator pips
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+  left: 50%;
+  margin-left: -30%;
+  padding-left: 0;
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+  left: 15%;
+  right: 15%;
+}
+
+
+// Scale up controls for tablets and up
+@media screen and (min-width: @screen-sm-min) {
+
+  // Scale up the controls a smidge
+  .carousel-control {
+    .glyphicons-chevron-left,
+    .glyphicons-chevron-right,
+    .icon-prev,
+    .icon-next {
+      margin-left: -15px;
+    }
+  }
+  // Show and left align the captions
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+  }
+
+}

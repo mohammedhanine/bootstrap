@@ -1,0 +1,23 @@
+//
+// List groups
+// --------------------------------------------------
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+.list-group {
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+}
+
+// Individual list items
+// -------------------------
+.list-group-item {
+  // Align badges within list items
+  > .badge {
+    float: right;
+  }
+  > .badge + .badge {
+    margin-right: 5px;
+  }
+}

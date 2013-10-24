@@ -82,6 +82,10 @@ module.exports = function(grunt) {
         src: ['less/bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      bootstrap_ltr: {
+        src: ['less/ltr/bootstrap.less'],
+        dest: 'dist/css/ltr/<%= pkg.name %>.css'
+      },
       min: {
         options: {
           compress: true

@@ -1,0 +1,80 @@
+//
+// Forms
+// --------------------------------------------------
+
+// Form control sizing
+.input-sm {
+  .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+.input-lg {
+  .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.radio,
+.checkbox {
+  padding-left: 20px;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+  padding-left: 20px;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+//
+// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
+
+.form-inline {
+
+  // Kick in the inline
+  @media (min-width: @screen-sm) {
+    // Remove default margin on radios/checkboxes that were used for stacking, and
+    // then undo the floating of radios and checkboxes to match (which also avoids
+    // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+    .radio,
+    .checkbox {
+      padding-left: 0;
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+      margin-left: 0;
+    }
+  }
+}
+// Horizontal forms
+//
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+
+.form-horizontal {
+  // Only right align form labels here when the columns stop stacking
+  @media (min-width: @screen-sm-min) {
+    .control-label {
+      text-align: right;
+    }
+  }
+}

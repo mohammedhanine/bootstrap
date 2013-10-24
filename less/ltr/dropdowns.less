@@ -1,0 +1,39 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+
+// Dropdown arrow/caret
+.caret {
+  margin-left: 2px;
+}
+// The dropdown menu (ul)
+.dropdown-menu {
+  left: 0;
+  float: left;
+
+  // Aligns the dropdown menu to right
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+  
+}
+// Right aligned dropdowns
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+// Component alignment
+//
+// Reiterate per navbar.less and the modified component alignment there.
+
+@media (min-width: @grid-float-breakpoint) {
+  .navbar-right {
+    .dropdown-menu {
+      .pull-right > .dropdown-menu();
+    }
+  }
+}
+
