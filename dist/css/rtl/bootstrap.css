@@ -965,11 +965,13 @@ th {
 }
 
 .alert-dismissable {
-  padding-right: 35px;
+  padding-right: 0;
+  padding-left: 35px;
 }
 
 .alert-dismissable .close {
-  right: -21px;
+  right: auto;
+  left: -21px;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -1009,27 +1011,30 @@ th {
 }
 
 .progress-bar {
-  float: left;
-}
-
-.media > .pull-left {
-  margin-right: 10px;
-}
-
-.media > .pull-right {
-  margin-left: 10px;
-}
-
-.list-group {
-  padding-left: 0;
-}
-
-.list-group-item > .badge {
   float: right;
 }
 
+.media > .pull-left {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.media > .pull-right {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.list-group {
+  padding-right: 0;
+}
+
+.list-group-item > .badge {
+  float: left;
+}
+
 .list-group-item > .badge + .badge {
-  margin-right: 5px;
+  margin-right: 0;
+  margin-left: 5px;
 }
 
 .panel > .table-bordered > thead > tr > th:first-child,
@@ -1044,7 +1049,7 @@ th {
 .panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,
 .panel > .table-bordered > tfoot > tr > td:first-child,
 .panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-  border-left: 0;
+  border-right: 0;
 }
 
 .panel > .table-bordered > thead > tr > th:last-child,
@@ -1059,38 +1064,25 @@ th {
 .panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,
 .panel > .table-bordered > tfoot > tr > td:last-child,
 .panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-  border-right: 0;
-}
-
-.panel > .table-bordered > thead > tr:last-child > th,
-.panel > .table-responsive > .table-bordered > thead > tr:last-child > th,
-.panel > .table-bordered > tbody > tr:last-child > th,
-.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,
-.panel > .table-bordered > tfoot > tr:last-child > th,
-.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-.panel > .table-bordered > thead > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > thead > tr:last-child > td,
-.panel > .table-bordered > tbody > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,
-.panel > .table-bordered > tfoot > tr:last-child > td,
-.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td {
-  border-bottom: 0;
+  border-left: 0;
 }
 
 .close {
-  float: right;
+  float: left;
 }
 
 .modal-footer .btn + .btn {
-  margin-left: 5px;
+  margin-right: 5px;
+  margin-left: 0;
 }
 
 .modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
+  margin-right: -1px;
+  margin-left: 0;
 }
 
 .modal-footer .btn-block + .btn-block {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .tooltip.right {
@@ -1104,39 +1096,51 @@ th {
 }
 
 .tooltip.top .tooltip-arrow {
-  left: 50%;
-  margin-left: -5px;
+  right: 50%;
+  left: auto;
+  margin-right: -5px;
+  margin-left: 0;
 }
 
 .tooltip.top-left .tooltip-arrow {
-  left: 5px;
+  right: 5px;
+  left: auto;
 }
 
 .tooltip.top-right .tooltip-arrow {
-  right: 5px;
+  right: auto;
+  left: 5px;
 }
 
 .tooltip.right .tooltip-arrow {
-  left: 0;
-  border-right-color: #000000;
-}
-
-.tooltip.left .tooltip-arrow {
   right: 0;
+  left: auto;
+  border-right-color: none;
   border-left-color: #000000;
 }
 
+.tooltip.left .tooltip-arrow {
+  right: auto;
+  left: 0;
+  border-right-color: #000000;
+  border-left-color: none;
+}
+
 .tooltip.bottom .tooltip-arrow {
-  left: 50%;
+  right: 50%;
+  left: auto;
+  margin-right: 0;
   margin-left: -5px;
 }
 
 .tooltip.bottom-left .tooltip-arrow {
-  left: 5px;
+  right: 5px;
+  left: auto;
 }
 
 .tooltip.bottom-right .tooltip-arrow {
-  right: 5px;
+  right: auto;
+  left: 5px;
 }
 
 .popover {
