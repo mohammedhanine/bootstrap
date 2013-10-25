@@ -3,25 +3,30 @@
 // --------------------------------------------------
 .carousel-inner {
   > .active {
-    left: 0;
+    left: auto;
+    right: 0;
   }
   
   > .next {
-    left: 100%;
+    left: auto;
+    right: 100%;
   }
   > .prev {
-    left: -100%;
+    left: auto;
+    right: -100%;
   }
   > .next.left,
   > .prev.right {
-    left: 0;
+    right: 0;
   }
 
   > .active.left {
-    left: -100%;
+    left: auto;
+    right: -100%;
   }
   > .active.right {
-    left: 100%;
+    left: auto;
+    right: 100%;
   }
 
 }
@@ -30,38 +35,39 @@
 // ---------------------------
 
 .carousel-control {
-  left: 0;
+  right: 0;
   // Set gradients for backgrounds
   &.left {
+  	left: auto;
+    right: 0;
     #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
   }
   &.right {
-    left: auto;
-    right: 0;
     #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
   }
   
   .icon-prev,
   .glyphicon-chevron-left {
-    left: 50%;
+    right: 50%;
   }
   .icon-next,
   .glyphicon-chevron-right {
-    right: 50%;
+    left: 50%;
   }
   .icon-prev,
   .icon-next {
-    margin-left: -10px;
+    margin-right: -10px;
+    margin-left: 0;
   }
 
   .icon-prev {
     &:before {
-      content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+      content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
     }
   }
   .icon-next {
     &:before {
-      content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+      content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
     }
   }
 }
@@ -72,9 +78,12 @@
 // slide your carousel holds.
 
 .carousel-indicators {
-  left: 50%;
-  margin-left: -30%;
+  right: 50%;
+  left:auto;
+  margin-right: -30%;
+  margin-left: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
 // Optional captions
@@ -96,6 +105,7 @@
     .icon-prev,
     .icon-next {
       margin-left: -15px;
+      margin-right: 0;
     }
   }
   // Show and left align the captions

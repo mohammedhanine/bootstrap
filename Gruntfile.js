@@ -90,6 +90,13 @@ module.exports = function(grunt) {
         src: ['less/rtl/bootstrap.less'],
         dest: 'dist/css/rtl/<%= pkg.name %>.css'
       },
+      bootstrap_rtl_min: {
+	options: {
+          compress: true
+        },
+        src: ['less/rtl/bootstrap.less'],
+        dest: 'dist/css/rtl/<%= pkg.name %>.min-rtl.css'
+      },
       min: {
         options: {
           compress: true
