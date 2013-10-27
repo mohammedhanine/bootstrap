@@ -1011,10 +1011,10 @@ th {
 
 @media (min-width: 768px) {
   .navbar-left {
-    float: left !important;
+    float: right !important;
   }
   .navbar-right {
-    float: right !important;
+    float: left !important;
   }
 }
 
@@ -1445,9 +1445,9 @@ th {
 }
 
 .pull-right {
-  float: right !important;
+  float: left !important;
 }
 
 .pull-left {
-  float: left !important;
+  float: right !important;
 }
