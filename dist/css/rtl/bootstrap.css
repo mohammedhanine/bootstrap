@@ -6,11 +6,11 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 .text-left {
-  text-align: left;
+  text-align: right;
 }
 
 .text-right {
-  text-align: right;
+  text-align: left;
 }
 
 .list-unstyled {
@@ -1011,10 +1011,10 @@ th {
 
 @media (min-width: 768px) {
   .navbar-left {
-    float: right !important;
+    float: left !important;
   }
   .navbar-right {
-    float: left !important;
+    float: right !important;
   }
 }
 
